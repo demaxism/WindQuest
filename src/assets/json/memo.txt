@@ -1,0 +1,3 @@
+A_180606_001 teddy
+A_180515_001 goat
+A_py001teddy  teddy generated in blender py, 20180620

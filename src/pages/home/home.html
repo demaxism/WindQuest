@@ -1,0 +1,23 @@
+
+<ion-content class="home-page">
+  <div #container id="container"></div>
+  <div id="contTop">
+    <label id="label-dbg"></label>
+    <a class="btn-h1 btn-1" id="btn-list" (click)="onBtnSembos()"><span>List</span></a>
+    <a class="btn-h1 btn-1" id="btn-about" (click)="onBtnAbout()"><span>About</span></a>
+  </div>
+  <div #contLow id="contLow" class="uiBgShadow">
+    <div #placeLine id="placeLine" class="btnLine">
+      <place-choose-toggle class="btn-place" *ngFor="let pd of placeDispList" 
+        [bicon]=pd.icon [isActive]=pd.isActive (click)="choosePlace(pd.index)" ></place-choose-toggle>
+    </div>
+    <div id="mainBtnLine" class="btnLine">
+      <scale-button class="btnMain" bicon="btn_choose_pet" size=60 (clickDelayed)="onBtnSembos()"></scale-button>
+      <scale-button class="btnMain" bicon="btn_choose_place" size=60></scale-button>
+      <scale-button class="btnMain" bicon="btn_play" size=60 (clickDelayed)="onBtnSail()"></scale-button>
+    </div>
+  </div>
+  <div #blocker id="blocker" class="blocker"></div>
+  <div *ngIf="initLoading" #maskCover id="maskCover" class="loadingCover"><div class="loadingSign lds-dual-ring"></div></div>
+  <div *ngIf="loading" id="switchViewCover" class="loadingCover"><div class="loadingSign lds-dual-ring"></div></div>
+</ion-content>

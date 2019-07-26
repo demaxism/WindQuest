@@ -1,0 +1,11 @@
+
+<ion-content #ionCont>
+    <div #cont id="cont">
+        <p #viewTitle class="dbgLabel">Sembo view</p>
+        <div #demoBox class="demoBox"></div>
+        <div *ngIf="showOptBtns" class="btnLine" id="optBtns">
+            <button-common class="btn-line" caption="SAVE" (click)="onSave()"></button-common>
+            <button-common class="btn-line" caption="DISCARD" (click)="onDiscard()"></button-common>
+        </div>
+    </div>
+</ion-content>

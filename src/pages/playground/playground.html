@@ -1,0 +1,17 @@
+<ion-content class="playground-page">
+  <div #container id="container"></div>
+  <div #demoBox id="demoBox"></div>
+  <div id="cont2d" class="full-size">
+    <label id="label-dbg"></label>
+    <div #normalLayer class="full-size">
+      <a class="btn-h1 btn-1" id="btn-list" (click)="onBtnList()"><span>List</span></a>
+      <a class="btn-h1 btn-1" id="btn-about" (click)="onBtnAbout()"><span>About</span></a>
+      <a class="btn-b1 btn-1" #btnBreed id="btn-breed" (click)="onBtnBreed()"><span>Breed</span></a>
+      <a class="btn-b1 btn-1" #btnClear id="btn-clear" (click)="onBtnClear()"><span>Remove</span></a>
+    </div>
+    <div #demoLayer class="full-size">
+      <a class="btn-b2 btn-1" id="btn-save" (click)="onBtnSave()"><span>Save</span></a>
+      <a class="btn-b2 btn-1" id="btn-discard" (click)="onBtnDiscard()"><span>Discard</span></a>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-content class="starter-page">
+  <div #container id="container"></div>
+  <label #alertLine class="alertLine"></label>
+  <div *ngIf="loading" id="loadingCover"><div id="loadingSign" class="lds-dual-ring"></div></div>
+  <debug-button class="top-pad-1" id="btn-back" caption="entry" routeTo="EntryPage"></debug-button>
+  <div #contStarter id="contStarter">
+    <button-common class="btn-h1" id="btn-start" caption="START" (click)="toChoose()"></button-common>
+    <button-common class="btn-h1" id="btn-login" caption="LOGIN" (click)="toLogin()"></button-common>
+  </div>
+  <div #contLogin id="contLogin" class="uiCont">
+    <div class="input-group input-group-icon">
+      <input #loginName class="input2" type="text" placeholder="User Name"/>
+      <div class="input-icon"><img class="fa" src="assets/imgs/icon-user.png"></div>
+    </div>
+    <div class="input-group input-group-icon">
+      <input #loginPswd class="input2" type="password" placeholder="Password"/>
+      <div class="input-icon"><img class="fa" src="assets/imgs/icon-key.png"></div>
+    </div>
+    <div class="btnLine">
+      <button-common class="btn-line" caption="<" (click)="toStart()"></button-common>
+      <button-common class="btn-line" caption="OK" (click)="onLogin()"></button-common>
+    </div>
+  </div>
+  <div #contChoose id="contChoose" class="uiCont">
+    <h1>Choose your pet</h1>
+    <div id="modelLine" class="btnLine">
+      <icon-toggle class="btn-line" index="0" filterId="modelTog" size="40" (click)="onChooseModel(0)"></icon-toggle>
+      <icon-toggle class="btn-line" index="1" filterId="modelTog" size="40" (click)="onChooseModel(1)"></icon-toggle>
+    </div>
+    <h1>Choose color</h1>
+    <div #colorLine id="colorLine" class="btnLine">
+      <round-color-toggle *ngFor="let nc of colorList" class="btn-line" [bcolor]=nc (click)="onChooseColor(nc)"></round-color-toggle>
+    </div>
+    <button-common class="center-btn" id="btn-next" caption="NEXT" (click)="toUsername()"></button-common>
+  </div>
+  <div #contUsername id="contUsername" class="uiCont">
+    <h1>Enter your name: </h1>
+
+    <div class="input-group input-group-icon" id="inputName">
+      <input #inputName class="input2" type="text" placeholder="User Name"/>
+      <div class="input-icon"><img class="fa" src="assets/imgs/icon-user.png"></div>
+    </div>
+    <div class="btnLine">
+        <button-common class="btn-line" caption="<" (click)="toChoose()"></button-common>
+        <button-common class="btn-line" caption="OK" (click)="onRegister()"></button-common>
+    </div>
+   </div>
+  <div #contConfirm id="contConfirm" class="uiCont">
+    <h1 #labelWelcome id="labelWelcome">Welcome</h1>
+    <button-common class="center-btn" id="btnConfirm" scaleTo=1.5 caption="Go!" routeTo="LoadPage"></button-common>
+  </div>
+</ion-content>

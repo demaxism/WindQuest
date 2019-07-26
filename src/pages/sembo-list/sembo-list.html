@@ -1,0 +1,57 @@
+<ion-content class="page-sembo-list">
+<div #container id="container"></div>
+<div id="top">
+    <table class="abilityTable">
+        <tr style="height:3px;"></tr>
+        <tr>
+            <td class="longSpan"  colspan="4">{{showingSembo.name}}</td>
+        </tr>
+        <tr>
+            <td class="attrName">HP</td> <td class="attrValue">???/{{showingSembo.hp}}</td>
+            <td class="attrName">ATK</td> <td class="attrValue2">{{showingSembo.atk}}</td>
+        </tr>
+        <tr>
+            <td class="attrName">CD</td> <td class="attrValue">05:31</td>
+            <td class="attrName">DEF</td> <td class="attrValue2">{{showingSembo.def}}</td>
+        </tr>
+        <tr>
+            <td class="attrName">寿命</td> <td class="attrValue">100天</td>
+            <td class="attrType" colspan="2">{{showingSembo.typeStr}}</td>
+        </tr>
+        <tr>
+            <td class="attrName">獲得</td> <td class="attrValue">{{showingSembo.birthStr}}</td>
+            <td></td> <td></td>
+        </tr>
+        <tr>
+            <td class="attrName">Gen</td> <td class="attrValue">16</td>
+            <td class="attrType" colspan="2">
+            </td>
+        </tr>
+        <tr style="height:3px;"></tr>
+    </table>
+    <scale-button id="attrDetail" bicon="ability_detail_btn" size=50 (click)="onDetail()" ></scale-button>
+    <img *ngIf="isSelected" class="semboThumb" src="{{semboThumbUrl}}" width=160 height=160>
+</div>
+<div id="cont">
+    <div id="scrollBox" (scroll)="onListScroll($event)">
+        <div class="matPlaceHolder"></div>
+        <mat-grid-list #scrollCont id="scrollCont" cols="4" rowHeight="1:1">
+            <mat-grid-tile *ngFor="let smb of sembos">
+                <sembo-thumbnail [semboObj]=smb></sembo-thumbnail>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>
+<div class="upGradient"></div>
+<div id="btnOps" class="btnOps">
+    <scale-button *ngIf="showMoveIn" bicon="pet_move_in" size=50 (click)="moveIn()"></scale-button>
+    <scale-button *ngIf="showMoveOut" bicon="pet_move_out" size=50 (click)="moveOut()"></scale-button>
+</div>
+<div id="foot">{{serverName}}</div>
+<a class="btn-2" #btnBackBottom id="btnBackBottom" (click)="onBtnBack()"><span>BACK</span></a>
+<a class="btn-2" #btnSort id="btnSort"><span>Date▼</span></a>
+
+<confirm-dialog [control]=moveOutPetDialog>Remove this pet from the current scene?</confirm-dialog>
+<confirm-dialog [control]=moveInPetDialog>Put this pet in the current scene?</confirm-dialog>
+<div *ngIf="loading" class="loadingCover"><div class="loadingSign lds-dual-ring"></div></div>
+</ion-content>

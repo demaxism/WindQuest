@@ -1,0 +1,23 @@
+<ion-content class="page-about">
+    <input type="file" accept="image/*" (change)="onPicSelected($event)" />
+  <div id="top">
+      <a class="btn-1" id="btn-back" (click)="onBtnBack()"><span>back</span></a>
+      <a class="btn-1" id="btn-cam" (click)="onBtnCam()"><span>cam</span></a>
+      <a class="btn-1" id="btn-flip" (click)="onBtnFlip()"><span>flip</span></a>
+      <a class="btn-1" id="btn-capture" (click)="onBtnCapture()"><span>Capt</span></a>
+      <a class="btn-1" id="btn-crop" (click)="onBtnCrop()"><span>Crop</span></a>
+  </div>
+  
+  <div id="cameraPort" class="mainCont">
+      <img id="capture" class="contInner">
+      <video id="videoCont" autoplay></video>
+      <img class="faceOutline" src="assets/ui/face_outline.png">
+  </div>
+
+  <div id="croppedCont" class="mainCont">
+    <img id="croppedPhoto" class="contInner">
+    <img class="faceOutline" src="assets/ui/face_outline.png">
+  </div>
+
+  <p #dbgInfo></p>
+</ion-content>

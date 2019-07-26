@@ -1,0 +1,37 @@
+sembo-view {
+    ion-content {
+        background: transparent !important;
+        height: 100%;
+    }
+
+    #cont {
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+
+    .dbgLabel {
+        position: absolute;
+        top: 0px;
+        font: 12px arial, sans-serif;
+        margin: 5px;
+    }
+    
+    .demoBox {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        height: 300px;
+        width: 300px;
+        transform: translate(-50%, -50%);
+        z-index: 102;
+        pointer-events: none;
+    }
+
+    #optBtns {
+        width: 100%;
+        position: absolute;
+        bottom: 50px;
+    }
+}
+

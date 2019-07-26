@@ -1,0 +1,28 @@
+
+.smCont {
+    width: 86px;
+    height: 86px;
+    background-color: rgba(white, 0.2);
+    border: 2px solid rgba(white, 0.4);
+    border-radius: 14px;
+}
+
+.smCont:active {
+    background-color: rgb(211, 234, 255);
+}
+
+.smSelected {
+    background-color: rgb(211, 234, 255);
+}
+
+.smCurrent {
+    border: 2px solid white;
+}
+
+.smSideIcon {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    width: 20px;
+    height: 20px;
+}

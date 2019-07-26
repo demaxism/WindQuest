@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Entry page
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class="entry-page" id="contIon">
+        <ion-list>
+          <ion-list-header>
+            <p #dbgLabelUser>user:</p>
+          </ion-list-header>
+          <ion-item>
+              <ion-label>Is local</ion-label>
+              <ion-toggle [(ngModel)]="isEndpointLocal" (ionChange)="onLocalChange()"></ion-toggle>
+          </ion-item>
+          <ion-item>
+            <a class="btn-endpoint btn-1" id="btn-plygrd" (click)="onBtnPlayground()"><span>plygrd</span></a>
+            <a class="btn-endpoint btn-1" id="btn-home" (click)="onBtnHome()"><span>home</span></a>
+          </ion-item>
+          <ion-item>
+            <a class="btn-endpoint btn-1" id="btn-top" (click)="onBtnTop()"><span>top</span></a>
+            <a class="btn-endpoint btn-1" id="btn-register" (click)="onBtnRegister()"><span>register</span></a>
+            <a class="btn-endpoint btn-1" id="btn-login" (click)="onBtnLogin()"><span>login</span></a>
+            <a class="btn-endpoint btn-1" id="btn-test" (click)="onBtnTest()"><span>test</span></a>
+          </ion-item>
+          <ion-item>
+            <a class="btn-endpoint btn-1" id="btn-proceed" (click)="onBtnProceed()"><span>Proceed</span></a>
+            <a class="btn-endpoint btn-1" id="btn-clear" (click)="onBtnClear()"><span>Clear</span></a>
+            <a class="btn-endpoint btn-1" id="btn-reload" (click)="onBtnReload()"><span>Reload</span></a>
+          </ion-item>
+          <ion-item>
+            <a class="btn-endpoint btn-1" id="btn-proceed" (click)="onCamera()"><span>Camera</span></a>
+            <a class="btn-endpoint btn-1" id="btn-proceed" (click)="onAbout()"><span>About</span></a>
+          </ion-item>
+          <ion-item> <ion-label class="clabel">space3</ion-label> </ion-item>
+          <ion-item> <ion-label class="clabel">space4</ion-label> </ion-item>
+          <ion-item> <ion-label class="clabel">space5</ion-label> </ion-item>
+          <ion-item> <ion-label class="clabel">space6</ion-label> </ion-item>
+          <ion-item> <ion-label class="clabel">space7</ion-label> </ion-item>
+          <ion-item> <ion-label class="clabel">space8</ion-label> </ion-item>
+        </ion-list>
+    
+  </ion-content>

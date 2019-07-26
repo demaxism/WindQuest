@@ -1,0 +1,58 @@
+<ion-content class="page-sembo-detail">
+  <div id="upper">
+
+    <table class="abilityTable">
+      <tr style="height:3px;"></tr>
+      <tr>
+          <td class="longSpan" colspan="2">{{showingSembo.name}}</td>
+      </tr>
+      <tr>
+          <td class="attrName">HP</td> <td class="attrValue">???/{{showingSembo.hp}}</td>
+      </tr>
+      <tr>
+          <td class="attrName">CD</td> <td class="attrValue">05:31</td>
+      </tr>
+      <tr>
+          <td class="attrName">寿命</td> <td class="attrValue">100天</td>
+      </tr>
+      <tr>
+          <td class="attrName">獲得</td> <td class="attrValue">{{showingSembo.birthStr}}</td>
+      </tr>
+      <tr>
+          <td class="attrName">Gen</td> <td class="attrValue">16</td>
+      </tr>
+      <tr>
+          <td class="attrName">ATK</td> <td class="attrValue">{{showingSembo.atk}}</td>
+      </tr>
+      <tr>
+          <td class="attrName">DEF</td> <td class="attrValue">{{showingSembo.def}}</td>
+      </tr>
+      <tr>
+          <td class="attrName">AAA</td> <td class="attrValue">123</td>
+      </tr>
+      <tr style="height:3px;"></tr>
+    </table>
+    <div class="semboThumb">
+        <img  src="{{semboThumbUrl}}" width=156 height=156>
+    </div>
+  </div>
+
+  <div *ngIf="hasParents==false" id="originCont">
+    <h1 class="whiteTitle">这是原生初代物种</h1>
+  </div>
+
+  <div *ngIf="hasParents==true" id="parentsCont">
+    <h1 class="whiteTitle">Parents:</h1>
+    <div class="parentEle parentLeft">
+        <img src="{{parentAUrl}}" width=130 height=130>
+    </div>
+    <img class="parentPlus" src="assets/imgs/parent_plus.png" width=40 height=40> 
+    <div class="parentEle">
+        <img src="{{parentBUrl}}" width=130 height=130>
+    </div>
+  </div>
+
+  <div class="backBtn">
+    <button-common class="btn-line" caption="<" (click)="onBack()"></button-common>
+  </div>
+</ion-content>

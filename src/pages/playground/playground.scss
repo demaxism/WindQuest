@@ -1,0 +1,79 @@
+.playground-page {
+
+.scroll-content {
+    overflow: hidden;
+}
+
+#demoBox {
+    margin-top: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    width: 300px;
+    z-index: 102;
+    pointer-events: none;
+    background-color: rgba(221, 162, 84, 0.5)
+}
+
+#container {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    top: 65px;
+    background-color: rgba(155,200,250,0.7);
+    z-index: 101;
+}
+
+#cont2d {
+    z-index: 100;
+}
+
+a.btn-h1 {
+    position: absolute;
+    top: 20px;
+}
+
+a.btn-b1 {
+    position: absolute;
+    bottom: 25px;
+}
+
+a.btn-b2 {
+    position: absolute;
+    bottom: 40px;
+}
+
+#btn-list {
+    left: 55%;
+}
+
+#btn-about {
+    left: 75%;
+}
+
+#btn-breed {
+    right: 20px;
+}
+
+#btn-clear {
+    left: 20px;
+}
+
+#btn-save {
+    right: 20%;
+}
+
+#btn-discard {
+    left: 20%;
+}
+
+#label-dbg {
+    top: 20px;
+    font-size: 15px;
+}
+
+.ui {
+    position: absolute;
+}
+
+}

@@ -1,0 +1,81 @@
+.home-page {
+
+.scroll-content {
+    overflow: hidden;
+}
+
+#container {
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-bg0);
+    z-index: -1;
+}
+
+#contTop {
+    position: absolute;
+    z-index: 102;
+    width: 100%;
+    height: 65px;
+    top: 0px;
+}
+
+#contLow {
+    position: absolute;
+    z-index: 102;
+    width: 100%;
+    height: 160px;
+    bottom: 0px;
+}
+
+#maskCover {
+    background-color: var(--main-bg0);
+}
+
+.btn-place {
+    display: inline-block;
+    margin: 0px 8px;
+}
+
+#placeLine {
+    border-bottom: 1px dotted white;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+#mainBtnLine {
+    margin-top: 10px;
+}
+
+.btnMain {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.uiBgShadow {
+    background-image: url("../assets/imgs/pattern/dark_up_fade.png");
+    background-repeat: repeat-x;
+    background-size: 10px 100%;
+}
+
+a.btn-h1 {
+    position: absolute;
+    top: 20px;
+}
+
+#btn-list {
+    left: 55%;
+}
+
+#btn-about {
+    left: 75%;
+}
+
+#label-dbg {
+    top: 20px;
+    font-size: 15px;
+}
+
+}
