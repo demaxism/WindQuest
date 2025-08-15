@@ -27,6 +27,7 @@ install npm: (use su to be root if has access problem)
 
 ![s-list](https://github.com/user-attachments/assets/2a77e425-5f4d-4de3-bd60-7dbd1a94d428)
 
-<img width="600" alt="s2b" src="https://github.com/user-attachments/assets/6d0d9950-a495-4df9-9d57-53fe7332da23" />
+<img width="400" alt="s2b" src="https://github.com/user-attachments/assets/6d0d9950-a495-4df9-9d57-53fe7332da23" />
+
 
 
